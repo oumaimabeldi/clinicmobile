@@ -17,8 +17,10 @@ import { DoctorsListComponent } from './doctors-list/doctors-list.component';
     CommonModule,
     FormsModule,
     IonicModule,
-    PersonnelPageRoutingModule,
+    PersonnelPageRoutingModule
+    
   ],
-  declarations: [PersonnelPage,DoctorsListComponent]
+  declarations: [PersonnelPage,DoctorsListComponent,EventModalComponent,DoctorComponent,GererDateCalenderComponent],
+  
 })
 export class PersonnelPageModule {}
