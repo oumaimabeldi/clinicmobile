@@ -13,6 +13,8 @@ import { RouteReuseStrategy } from '@angular/router';
 import { HistoriqueMedicaleComponent } from './historique-medicale/historique-medicale.component';
 
 
+
+
 @NgModule({
   declarations: [
     PatientPage,
@@ -23,6 +25,7 @@ import { HistoriqueMedicaleComponent } from './historique-medicale/historique-me
     FormsModule,
     IonicModule,
     PatientPageRoutingModule
+    
   ],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   schemas:[CUSTOM_ELEMENTS_SCHEMA]

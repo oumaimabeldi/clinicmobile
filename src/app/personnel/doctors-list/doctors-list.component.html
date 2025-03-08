@@ -1,0 +1,29 @@
+<ion-header >
+  <ion-toolbar color="primary">
+    <ion-title>Liste des médecins</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+ <ion-list>
+  <ion-item button *ngFor="let item of doctorListe" [routerLink]="[item.id]">
+    <ion-avatar slot="start">
+      <img [src]="item.img" />
+    </ion-avatar>
+    <ion-label>
+      {{item.nom}}
+      <p>{{item.description}}</p>
+    </ion-label>
+
+    <ion-badge slot="end">{{item.rating}}</ion-badge>
+  
+  </ion-item>
+ </ion-list>
+ <ion-infinite-scroll (ionInfinite)="loadMore($event)">
+  <ion-infinite-scroll-content 
+  loadingSpinner="bubbles" 
+  loadingText="Loading more data...">
+  </ion-infinite-scroll-content>
+
+ </ion-infinite-scroll>
+</ion-content>
