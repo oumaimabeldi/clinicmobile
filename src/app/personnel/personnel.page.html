@@ -1,13 +1,69 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>personnel</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button> <!-- Bouton pour ouvrir le menu latéral -->
+    </ion-buttons>
+    <ion-title>Personnel</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">personnel</ion-title>
+      <ion-title size="large">Personnel</ion-title>
     </ion-toolbar>
   </ion-header>
+
+  <!-- Section de bienvenue -->
+  <div class="welcome-section">
+    <h1>Bienvenue, [Nom du Personnel]</h1>
+    <p>Gérez vos activités et votre calendrier facilement.</p>
+  </div>
+
+  <!-- Section des fonctionnalités -->
+  <div class="features-grid">
+    <!-- Calendrier -->
+    <ion-card class="feature-card" (click)="navigateToCalendar()">
+      <ion-card-header>
+        <ion-icon name="calendar-outline" class="feature-icon"></ion-icon>
+        <ion-card-title>Calendrier</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        Consultez et gérez votre emploi du temps.
+      </ion-card-content>
+    </ion-card>
+
+    <!-- Tâches -->
+    <ion-card class="feature-card" (click)="navigateToTasks()">
+      <ion-card-header>
+        <ion-icon name="list-outline" class="feature-icon"></ion-icon>
+        <ion-card-title>Tâches</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        Suivez vos tâches et vos objectifs.
+      </ion-card-content>
+    </ion-card>
+
+    <!-- Messages -->
+    <ion-card class="feature-card" (click)="navigateToMessages()">
+      <ion-card-header>
+        <ion-icon name="mail-outline" class="feature-icon"></ion-icon>
+        <ion-card-title>Messages</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        Consultez vos messages et notifications.
+      </ion-card-content>
+    </ion-card>
+
+    <!-- Profil -->
+    <ion-card class="feature-card" (click)="navigateToProfile()">
+      <ion-card-header>
+        <ion-icon name="person-outline" class="feature-icon"></ion-icon>
+        <ion-card-title>Profil</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        Modifiez vos informations personnelles.
+      </ion-card-content>
+    </ion-card>
+  </div>
 </ion-content>

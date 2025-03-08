@@ -1,0 +1,130 @@
+/* Global Styles */
+ion-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  
+  .container {
+    width:100%;
+    max-width: 400px;
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: center;
+  }
+  
+  /* Headings and Paragraphs */
+  .heading {
+    font-size: 24px;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 10px;
+  }
+  
+  .para {
+    font-size: 16px;
+    color: #7f8c8d;
+    margin-bottom: 20px;
+  }
+  
+  /* Input Fields */
+  .ion-item {
+    --background: transparent;
+    margin-bottom: 12px;
+    border: none;
+  }
+  
+  .input-item {
+    position: relative;
+    width: 100%;
+    border: 2px solid #dfe6e9;
+    border-radius: 8px;
+    padding: 12px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .input-item legend {
+    font-size: 12px;
+    color: #7f8c8d;
+  }
+  
+  .input-item ion-input {
+    width: 100%;
+    padding: 5px;
+    font-size: 14px;
+  }
+  
+  /* Buttons */
+  .login-button {
+    --background: #06668C;
+    --border-radius: 8px;
+    --color: white;
+    margin-top: 10px;
+  }
+  
+  .google-button {
+    --background: white;
+    --color: #06668C;
+    --border-radius: 8px;
+    border: 1px solid #bdc3c7;
+    margin-top: 10px;
+  }
+  
+  /* Links */
+  .forget-text,
+  .signup-text {
+    font-size: 14px;
+    color: #06668C;
+    margin: 10px 0;
+  }
+  
+  .forget-text a,
+  .signup-text a {
+    color: #06668C;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  .forget-text a:hover,
+  .signup-text a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Footer */
+  ion-footer {
+    --background: white;
+    text-align: center;
+  }
+  
+  .copyright {
+    font-size: 14px;
+    //color: #7f8c8d;
+  }
+  
+  .copyright a {
+    font-weight: bold;
+    color: #06668C;
+  }
+  .error-message {
+    color: red;
+    font-size: 0.9em;
+    margin-top: 5px;
+    text-align: center;
+  }
+  
+  ion-spinner {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .container {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .login-button, .google-button {
+    margin-top: 20px;
+  }
+  

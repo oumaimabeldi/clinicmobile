@@ -1,0 +1,73 @@
+<!-- 🌟 HEADER PERSONNALISÉ 🌟 -->
+<div class="custom-header">
+  <ion-button (click)="goBack()" fill="clear">
+    <ion-icon name="arrow-back"></ion-icon>
+  </ion-button>
+  
+  <span>{{ currentMonth }} {{ currentYear }}</span>
+  
+  <div class="nav-buttons">
+    <ion-button (click)="changeMonth(-1)" fill="clear">
+      <ion-icon name="chevron-back"></ion-icon>
+    </ion-button>
+    <ion-button (click)="changeMonth(1)" fill="clear">
+      <ion-icon name="chevron-forward"></ion-icon>
+    </ion-button>
+  </div>
+</div>
+
+<!-- 📅 CALENDRIER 📅 -->
+<ion-content>
+  <div class="calendar-grid">
+    <!-- Jours de la semaine -->
+    <div class="weekdays">
+      <div *ngFor="let day of weekdays" class="weekday">{{ day }}</div>
+    </div>
+
+    <!-- Jours du mois -->
+    <div class="days">
+      <div 
+        *ngFor="let day of days" 
+        (click)="day !== '' && openDayDetails(day)" 
+        [class.disabled]="day === ''" 
+        [class.has-event]="day !== '' && hasEvent(day)" 
+        class="day"
+      >
+        {{ day !== '' ? day : '' }}
+      </div>
+    </div>
+  </div>
+
+  <!-- 🌟 MODAL POUR LES RENDEZ-VOUS 🌟 -->
+  <ion-modal [isOpen]="isModalOpen" (didDismiss)="closeModal()">
+    <ng-template>
+      <div class="modal-container">
+        <!-- Titre du Modal -->
+        <h2>Rendez-vous du {{ selectedDay }} {{ currentMonth }}</h2>
+
+        <!-- Liste des événements -->
+        <div class="event-list">
+          <div *ngFor="let event of getEventsForDay(selectedDay)" class="event-item">
+            <ion-item>
+              <ion-label>{{ event.time }} - {{ event.title }}</ion-label>
+              <ion-button (click)="deleteEvent(event)" color="danger" fill="clear">
+                <ion-icon name="trash"></ion-icon>
+              </ion-button>
+            </ion-item>
+          </div>
+        </div>
+
+        <!-- Bouton Ajouter un Rendez-vous -->
+        <ion-button expand="block" (click)="addEvent()" class="add-btn">
+          <ion-icon name="add"></ion-icon>
+          Ajouter un rendez-vous
+        </ion-button>
+
+        <!-- Bouton Fermer -->
+        <ion-button (click)="closeModal()" fill="clear">
+          <ion-icon name="close"></ion-icon>
+        </ion-button>
+      </div>
+    </ng-template>
+  </ion-modal>
+</ion-content>

@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Ajouter un rendez-vous</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="dismiss()">Fermer</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label position="floating">Titre</ion-label>
+    <ion-input [(ngModel)]="event.title"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Heure</ion-label>
+    <ion-input type="time" [(ngModel)]="event.time"></ion-input>
+  </ion-item>
+  <ion-button expand="block" (click)="save()">Enregistrer</ion-button>
+</ion-content>

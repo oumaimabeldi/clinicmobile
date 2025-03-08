@@ -1,28 +1,28 @@
 
-<div id="main-content" >
+<!--<div id="main-content" >
   <ion-content [fullscreen]="true">
-    <!-- Bannière -->
+    
     <div class="banner relative h-[300px] overflow-hidden rounded-lg shadow-lg">
-      <!-- Image de fond -->
+   
       <img src="assets/home/clinic.jpeg" alt="Clinic Banner" class="w-full h-full object-cover" />
     
-      <!-- Overlay sombre pour améliorer la lisibilité -->
+      
       <div class="absolute inset-0 bg-black/40 flex flex-col justify-center items-center text-center p-4">
-        <!-- Texte principal -->
+        
         <h1 class="text-4xl font-bold text-white mb-4">
           Take Care<br>
           <span class="text-2xl font-medium">Your Health is Important</span>
         </h1>
     
-        <!-- Bouton Subscribe -->
-        <div class="subscribeButton mt-6 mb-10" >
+        
+        <div class="subscribeButton mt-6 mb-10" routerLink="/authentification">
           <ion-button class="subscribe-btn"  shape="round" >
             Se connecter
           </ion-button>
         </div>
       </div>
     
-      <!-- Barre de recherche -->
+   
       <div class="search-container absolute bottom-0 left-0 right-0 mx-4 mb-4">
         <ion-searchbar
           placeholder="Search for doctors, services..."
@@ -36,41 +36,6 @@
 
     
     
-
-    <!-- Section des Événements -->
-    <!-- <div class="event-slider">
-      <ion-slides [options]="{ slidesPerView: 'auto', zoom: false, grabCursor: true }" class="default-left-padding">
-        <ion-slide>
-          <ion-col class="ion-text-left">
-            <ion-card>
-              <ion-card-header class="ion-no-padding">
-                <img src="../../assets/home/clinic.jpeg" alt="Event Image" />
-              </ion-card-header>
-              <ion-card-content>
-                <p class="date">17th July, 2021</p>
-                <h2 class="eventname">International Jazz Festival</h2>
-                <p class="location"><ion-icon name="location"></ion-icon>Caracas, Venezuela</p>
-                <div class="additional-info">
-                  <div class="attendees">
-                    <img src="../../assets/persons/person1.svg" alt="Person 1" />
-                    <img src="../../assets/persons/person2.svg" alt="Person 2" />
-                    <img src="../../assets/persons/person3.svg" alt="Person 3" />
-                    <img src="../../assets/persons/person4.svg" alt="Person 4" />
-                    <div class="count">
-                      <img src="../../assets/persons/person-placeholder.svg" alt="More People" />
-                      <p>+7</p>
-                    </div>
-                  </div>
-                  <p class="time">10:00pm</p>
-                </div>
-              </ion-card-content>
-            </ion-card>
-          </ion-col>
-        </ion-slide>
-      </ion-slides>
-    </div> -->
-
-    <!-- Section des Services -->
     <div class="services">
       <h2 class="text-5xl mt-12 mb-14 font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#06668C] via-[#228fb9] to-[#228fb9] drop-shadow-lg tracking-wide uppercase">
         Nos Services
@@ -79,12 +44,12 @@
         @for (item of serviceListe; track $index) {
           <div class="w-full sm:w-[380px] md:w-[450px] lg:w-[500px] p-4 bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700 relative flex flex-col items-start m-4">
   
-            <!-- Image circulaire en haut à gauche -->
+            
             <img [src]="item.img" 
                  alt="Icone Cardiologie" 
                  class="w-16 h-16 rounded-full  border-white ">
             
-            <!-- Contenu bien aligné -->
+            
             <div class="mt-4">
               <p class="mb-3 font-normal text-gray-500 dark:text-gray-400">Service {{item.nomService}}</p>
               <a href="#" class="inline-flex font-medium items-center text-[#06668C] hover:underline">
@@ -107,7 +72,7 @@
         Qui Sommes-Nous ?
       </h2>
     
-      <!-- Contenu avec fond semi-transparent -->
+      
       <div class="max-w-2xl mx-auto text-center bg-white/20 backdrop-blur-sm rounded-2xl p-6 shadow-lg">
         <p class="text-white text-lg leading-relaxed mb-6">
           Clinic Saada, située au cœur de Tunis, est un établissement de santé de premier plan, offrant une gamme complète de services médicaux. Notre équipe de professionnels expérimentés est dédiée à assurer votre santé et votre bien-être.
@@ -117,14 +82,13 @@
         </p>
       </div>
     
-      <!-- Bouton avec effet de survol et ombre -->
       <button class="mt-8 px-8 py-3 bg-gradient-to-r from-white to-[#d6f2ff] text-[#06668C] font-semibold rounded-full hover:from-[#d6f2ff] hover:to-white transition-all duration-300 transform hover:scale-110 shadow-lg hover:shadow-2xl">
         En savoir plus
       </button>
     </div>
 
 
-    <!-- Section des Médecins -->
+
     <div class="doctors">
       <h2 class="text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#06668C] via-[#228fb9] to-[#228fb9] drop-shadow-lg tracking-wide uppercase">
         Our Doctors
@@ -166,35 +130,34 @@
     </div>
 
 
-    <!-- Section de Contact -->
+ 
     <div class="contact mt-24 bg-gradient-to-r from-[#06668C] to-[#228fb9] px-6 py-8 rounded-3xl shadow-2xl">
       <h2 class="text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-white to-[#d6f2ff] drop-shadow-2xl tracking-wide uppercase text-center mb-8">
         Contact Us
       </h2>
       <form class="max-w-2xl mx-auto">
-        <!-- Champ Nom -->
+        
         <ion-item class="mb-6 bg-white/20 backdrop-blur-sm rounded-2xl shadow-lg">
           <ion-label position="floating" class="text-white">Name</ion-label>
           <ion-input type="text" class="text-white"></ion-input>
         </ion-item>
     
-        <!-- Champ Email -->
+      
         <ion-item class="mb-6 bg-white/20 backdrop-blur-sm rounded-2xl shadow-lg">
           <ion-label position="floating" class="text-white">Email</ion-label>
           <ion-input type="email" class="text-white"></ion-input>
         </ion-item>
     
-        <!-- Champ Message -->
         <ion-item class="mb-6 bg-white/20 backdrop-blur-sm rounded-2xl shadow-lg">
           <ion-label position="floating" class="text-white">Message</ion-label>
           <ion-textarea class="text-white"></ion-textarea>
         </ion-item>
     
-        <!-- Bouton Envoyer -->
+      
         <ion-button expand="block" shape="round" class="mt-6 bg-gradient-to-r from-white to-[#d6f2ff] text-[#06668C] font-semibold hover:from-[#d6f2ff] hover:to-white transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-2xl">
           Evoyer
         </ion-button>
       </form>
     </div>
   </ion-content>
-</div>
+</div>-->

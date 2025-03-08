@@ -1,0 +1,199 @@
+/* Styles généraux */
+ion-app {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
+  }
+  
+  /* Menu latéral */
+  ion-menu {
+    --width: 280px; /* Largeur du menu */
+    --background: #ffffff; /* Fond du menu */
+  }
+  
+  ion-menu ion-header {
+    background-color: #06668C;
+    padding: 20px;
+  }
+  
+  ion-menu ion-title {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .menu-item {
+    --padding-start: 20px;
+    --padding-end: 20px;
+    --min-height: 60px;
+    --background: transparent;
+    --color: #06668C;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .menu-item:hover {
+    --background: #f0f0f0;
+  }
+  
+  .menu-icon {
+    color: #06668C;
+    margin-right: 15px;
+  }
+  
+  /* Bouton menu */
+  .menu-btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 20;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Section fixe "Nos Services" */
+  .fixed-section {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: #06668C;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .top {
+    text-align: center;
+  }
+  
+  .nameText p {
+    font-size: 1.5rem;
+    color: white;
+    margin: 0;
+  }
+  
+  .nameText h6 {
+    font-size: 1rem;
+    color: #e0e0e0;
+    margin: 5px 0 0;
+  }
+  
+  .middelBox {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .rdvIcone h2 {
+    font-size: 2.5rem;
+    color: white;
+    margin: 0;
+  }
+  
+  /* Liste des services défilante */
+  .fonctionnalitee {
+    margin-top: 20px;
+    padding: 20px;
+  }
+  
+  .service-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .service-list div {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    padding: 20px;
+    width: 100%;
+    max-width: 300px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .service-list div:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  .service-list img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+  }
+  
+  .service-list p {
+    font-size: 1rem;
+    color: #555;
+    margin: 0;
+  }
+  
+  .service-list a {
+    color: #06668C;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 10px;
+    display: inline-block;
+  }
+  
+  .service-list a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .rdvIcone h2 {
+      font-size: 2rem;
+    }
+  
+    .service-list div {
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .menu-btn {
+      top: 10px;
+      left: 10px;
+    }
+  
+    .fixed-section {
+      padding: 10px;
+    }
+  
+    .nameText p {
+      font-size: 1.2rem;
+    }
+  
+    .nameText h6 {
+      font-size: 0.9rem;
+    }
+  
+    .rdvIcone h2 {
+      font-size: 1.5rem;
+    }
+  
+    .service-list {
+      gap: 10px;
+    }
+  
+    .service-list div {
+      padding: 15px;
+    }
+  
+    .service-list img {
+      width: 60px;
+      height: 60px;
+    }
+  
+    .service-list p {
+      font-size: 0.9rem;
+    }
+  
+    .service-list a {
+      font-size: 0.9rem;
+    }
+  }

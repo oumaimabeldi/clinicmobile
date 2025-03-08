@@ -1,0 +1,134 @@
+/* 🌟 HEADER PERSONNALISÉ 🌟 */
+.custom-header {
+  background: #007aff;
+  color: white;
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 20px;
+  font-weight: bold;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.custom-header .nav-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.custom-header ion-button {
+  background: none;
+  color: white;
+  font-size: 18px;
+}
+
+/* 📅 GRILLE DU CALENDRIER 📅 */
+.calendar-grid {
+  display: flex;
+  flex-direction: column;
+  margin: 15px;
+  padding: 10px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* 🌤️ Jours de la semaine */
+.weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  text-align: center;
+  font-weight: bold;
+  padding: 8px 0;
+  background: #f1f1f1;
+  border-radius: 8px;
+}
+
+/* 📅 Jours du mois */
+.days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+  padding: 10px;
+}
+
+.day {
+  padding: 12px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  background: #e9ecef;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.day:hover {
+  background: #d1e7fd;
+}
+
+/* Désactiver les jours vides */
+.day.disabled {
+  background: transparent !important;
+  cursor: default;
+}
+
+/* Ajouter un effet aux jours avec un événement */
+.day.has-event {
+  background: #007aff;
+  color: white;
+  font-weight: bold;
+}
+
+/* 🎨 MODAL DESIGN 🎨 */
+.modal-container {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  margin: auto;
+}
+
+/* Style du titre du modal */
+.modal-container h2 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+/* Liste des événements */
+.event-list {
+  padding: 15px;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.event-item ion-item {
+  background: #f4f4f4;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+/* 🌟 BOUTON AJOUTER UN RENDEZ-VOUS 🌟 */
+.add-btn {
+  margin-top: 15px;
+  font-size: 16px;
+  font-weight: bold;
+  background: #28a745 !important;
+  color: white;
+  border-radius: 8px;
+}
+
+.add-btn ion-icon {
+  font-size: 18px;
+  margin-right: 5px;
+}
+
+/* Style des icônes */
+ion-icon {
+  font-size: 22px;
+}

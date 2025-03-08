@@ -1,0 +1,73 @@
+<ion-app>
+  <!-- Menu latéral -->
+  <ion-menu side="start" menuId="main-menu" contentId="main-content">
+    <ion-header>
+      <ion-toolbar style="--background: #06668C;">
+        <ion-title style="color: white;">Menu</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+        <ion-item lines="none" class="menu-item">
+          <ion-icon name="home" slot="start" class="menu-icon"></ion-icon>
+          <ion-label>Accueil</ion-label>
+        </ion-item>
+        <ion-item lines="none" class="menu-item">
+          <ion-icon name="person" slot="start" class="menu-icon"></ion-icon>
+          <ion-label>Profil</ion-label>
+        </ion-item>
+        <ion-item lines="none" class="menu-item">
+          <ion-icon name="settings" slot="start" class="menu-icon"></ion-icon>
+          <ion-label>Paramètres</ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+
+  <!-- Contenu principal -->
+  <ion-content id="main-content">
+    <!-- Bouton pour ouvrir le menu -->
+    <div>
+      <ion-button color="transparent" style="background-color: transparent;" ion-button menuToggle class="menu-btn" menuId="main-menu" contentId="main-content">
+        <ion-icon name="menu" style="color: #06668C; font-size: 2rem;"></ion-icon>
+      </ion-button>
+    </div>
+
+    <!-- Section fixe "Nos Services" -->
+    <div class="fixed-section" style="background-color: #06668C;">
+      <div class="top">
+        <div class="nameText">
+          <p style="color: white; font-size: 1.5rem; font-weight: bold;">Bienvenue à notre clinique</p>
+          <h6 style="color: #e0e0e0; font-size: 1rem;">Charguiya N°01254</h6>
+        </div>
+      </div>
+      <div class="middelBox">
+        <div class="rdvIcone">
+          <h2 class="text-3xl sm:text-5xl mt-8 sm:mt-12 mb-8 sm:mb-14 font-extrabold text-white bg-clip-text bg-gradient-to-r from-white via-[#e0e0e0] to-[#e0e0e0] drop-shadow-lg tracking-wide uppercase">
+            Nos Services
+          </h2>
+        </div>
+      </div>
+    </div>
+
+    <!-- Liste des services défilante -->
+    <div class="fonctionnalitee">
+      <ion-card style="border-radius: 20px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);">
+        <div class="service-list flex flex-wrap justify-center">
+          @for (item of serviceListe; track $index) {
+            <div class="w-full sm:w-[45%] md:w-[30%] lg:w-[23%] p-6 bg-white border border-gray-200 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 m-4">
+              <img [src]="item.img" alt="Icone Cardiologie" class="w-20 h-20 rounded-full border-4 border-[#06668C] mx-auto">
+              <div class="mt-6 text-center">
+                <p class="mb-3 font-normal text-gray-600">Service {{item.nomService}}</p>
+                <a href="#" class="inline-flex font-medium items-center text-[#06668C] hover:underline">
+                  Personnels de service
+                  <ion-icon name="arrow-forward" class="ml-2"></ion-icon>
+                </a>
+              </div>
+            </div>
+          }
+        </div>
+      </ion-card>
+    </div>
+  </ion-content>
+</ion-app>

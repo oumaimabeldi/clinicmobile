@@ -1,3 +1,44 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+  <ion-split-pane contentId="main-content">
+    <!-- Menu latéral -->
+    <ion-menu contentId="main-content" class="bg-gray-100">
+      <ion-header>
+        <ion-toolbar class="bg-blue-500">
+          <ion-title class="text-white">Menu</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content>
+        <ion-list>
+          <!-- Bouton Personnel -->
+          <ion-menu-toggle auto-hide="false">
+            <ion-item
+              button
+              routerLink="/personnel"
+              routerDirection="root"
+              class="hover:bg-blue-500 hover:text-white"
+            >
+              <ion-icon name="people-outline" slot="start"></ion-icon>
+              <ion-label>Personnel</ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+
+          <!-- Bouton Accueil -->
+          <ion-menu-toggle auto-hide="false">
+            <ion-item
+              button
+              routerLink="/accueil"
+              routerDirection="root"
+              class="hover:bg-blue-500 hover:text-white"
+            >
+              <ion-icon name="home-outline" slot="start"></ion-icon>
+              <ion-label>Accueil</ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+        </ion-list>
+      </ion-content>
+    </ion-menu>
+
+    <!-- Contenu principal -->
+    <ion-router-outlet id="main-content"></ion-router-outlet>
+  </ion-split-pane>
 </ion-app>

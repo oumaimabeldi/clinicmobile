@@ -1,0 +1,38 @@
+
+<ion-content>
+  <div class="doctors px-4 sm:px-0">
+    <h2 class="text-3xl sm:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#06668C] via-[#228fb9] to-[#228fb9] drop-shadow-lg tracking-wide uppercase">
+      Our Doctors
+    </h2>
+    <div class="doctor-list flex flex-wrap justify-center">
+      @for (item of doctorListe; track $index) {
+        <div class="flex flex-col bg-white shadow-sm border border-slate-200 rounded-lg my-4 sm:my-6 w-full sm:w-[45%] md:w-[30%] lg:w-[23%]" style="border-width: 5px; border-color: #06668C;">
+          <div class="m-2.5 overflow-hidden rounded-md h-60 sm:h-80 flex justify-center items-center">
+            <img class="w-full h-full object-cover" [src]="item.img" alt="profile-picture" />
+          </div>
+          <div class="p-4 sm:p-6 text-center">
+            <h4 class="mb-1 text-lg sm:text-xl font-semibold text-slate-800">
+              {{item.nom + " " + item.prenom}}
+            </h4>
+            <p class="text-sm font-semibold text-slate-500 uppercase">
+              {{item.speciality}}
+            </p>
+            <p class="text-sm sm:text-base text-slate-600 mt-2 sm:mt-4 font-light">
+              {{item.description}}
+            </p>
+            <p class="text-sm sm:text-base text-slate-600 mt-2 sm:mt-4 font-light">
+              {{item.disponibiliteActuelle}} <span> {{item.lieuLocal}}</span>
+            </p>
+          </div>
+          <div class="flex justify-center p-4 sm:p-6 pt-2 gap-4 sm:gap-7">
+            <button class="min-w-32 rounded-md bg-slate-800 py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-slate-700 focus:shadow-none active:bg-slate-700 hover:bg-slate-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none" 
+            (click)="navigatTo('/')"
+            type="button">
+              consulter
+            </button>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</ion-content>
